@@ -1,3 +1,6 @@
+[![GSoC 2026](https://img.shields.io/badge/GSoC-2026-blue.svg)](https://summerofcode.withgoogle.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # GSoC-2026-Research
 "This repository contains my research, technical evaluations, and proof-of-concept implementations for GSoC 2026, specifically focusing on the Quantum Particle Transformer (Q-ParT) project under ML4Sci."
 
