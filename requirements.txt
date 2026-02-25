@@ -1,0 +1,20 @@
+# JAX Core
+jax==0.7.1
+jaxlib==0.7.1
+jax-cuda12-plugin  # Include this if you have an NVIDIA GPU
+
+# Neural Network Frameworks (DeepMind Stack)
+flax==0.12.4
+optax==0.2.7
+chex==0.1.89       # For research-grade unit testing
+
+# Quantum AI Frameworks
+pennylane==0.44.0
+pennylane-catalyst # For high-performance JIT hybrid loops
+
+# Data & Utilities
+numpy>=1.26.0
+pandas>=2.1.0
+huggingface_hub    # To pull/push your Bible dataset
+kaggle             # To pull your Kaggle datasets
+einops             # Essential for Transformer tensor manipulations
