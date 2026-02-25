@@ -3,6 +3,7 @@ import jax.numpy as jnp
 from flax import linen as nn
 import optax
 from flax.training import train_state
+import matplotlib.pyplot as plt
 
 class QuarkGluonClassifier(nn.Module):
     """A standard MLP for binary classification of particle jets."""
@@ -55,3 +56,29 @@ def initialize_model(key, hidden_dims=128, learning_rate=1e-3):
     )
 
     return state
+
+def train_and_plot(key, num_steps=100, log_interval=10):
+    """Train the model and plot the loss curve."""
+    state = initialize_model(key)
+
+    # Generate dummy data
+    key, subkey_x, subkey_y = jax.random.split(key, 3)
+    batch_size = 32
+    num_features = 5
+    x = jax.random.normal(subkey_x, (batch_size, num_features))
+    y = jax.random.bernoulli(subkey_y, shape=(batch_size, 1)).astype(jnp.float32)
+
+    losses = []
+    for i in range(num_steps):
+        state, loss = train_step(state, x, y)
+        losses.append(loss)
+
+    # Plot the loss curve
+    plt.plot(losses)
+    plt.title("Quark-Gluon Classifier Training Loss")
+    plt.xlabel("Step")
+    plt.ylabel("Loss")
+    plt.savefig('results.png')
+    plt.show()
+
+    return losses

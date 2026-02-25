@@ -15,6 +15,7 @@ pennylane-catalyst # For high-performance JIT hybrid loops
 # Data & Utilities
 numpy>=1.26.0
 pandas>=2.1.0
+matplotlib>=3.8.0
 huggingface_hub    # To pull/push your Bible dataset
 kaggle             # To pull your Kaggle datasets
 einops             # Essential for Transformer tensor manipulations

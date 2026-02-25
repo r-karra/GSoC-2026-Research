@@ -1,6 +1,19 @@
 # GSoC-2026-Research
 "This repository contains my research, technical evaluations, and proof-of-concept implementations for GSoC 2026, specifically focusing on the Quantum Particle Transformer (Q-ParT) project under ML4Sci."
 
+This repository leverages expertise in high-fidelity sequence modeling—initially developed through the engineering of the KJV-Bible-LLM dataset—to optimize attention mechanisms for High Energy Physics (HEP) jet classification.
+
+# Visual Results
+
+### Quantum Attention Demo
+![Quantum Attention Plot](./results/attention_plot.png)
+
+### Training Convergence
+![Training Loss Curve](./results/loss_curve.png)
+
+### Quark-Gluon Classification
+![Quark Gluon Training Loss](./evaluations/quark_gluon_jax/results.png)
+
 # Reproducibility
 
 1. Configure the Google Colab Environment
